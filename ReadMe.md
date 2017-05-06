@@ -1,4 +1,4 @@
-# Mimicry
+# Mimicry.ai
 
 Copy the voice of anyone using machine learning.
 
@@ -8,8 +8,9 @@ Copy the voice of anyone using machine learning.
 * Install following dependencies
 
     sudo apt-get install -y git
-    sudo apt-get install -y python-virtualenv
     sudo apt-get install -y libcurl4-openssl-dev
+    sudo apt-get install -y python-virtualenv
+    sudo apt-get install -y python-dev
 
 
 * Setup Virtual environment
@@ -18,10 +19,11 @@ Copy the voice of anyone using machine learning.
     virtualenv venv
     source venv/bin/activate
     pip install --upgrade pip
+    pip install numpy scipy matplotlib ipython jupyter pandas sympy nose
+    pip install theano
+
 
 * Install Python dependencies
-
-
 
 ### Tasks
 
@@ -37,5 +39,18 @@ Copy the voice of anyone using machine learning.
     * Karunanithi
 
 3. Train the machine with sample data
+4. Setup Sample UI
+5. Provide text for conversion
 
-4. Provide text with
+
+### Audio download
+
+https://pagalworld.me/
+http://mp3lier.info/
+
+* Tools:
+
+youtube-dl --extract-audio --audio-format mp3 https://www.youtube.com/watch?v=4CxkK1gam8o
+
+
+
