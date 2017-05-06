@@ -8,7 +8,7 @@ Copy the voice of anyone using machine learning.
 * Install following dependencies
 
 ```
-    sudo apt-get install -y git csh make g++ unzip
+    sudo apt-get install -y git csh make g++ unzip tree
     sudo apt-get install -y libcurl4-openssl-dev
     sudo apt-get install -y python-virtualenv
     sudo apt-get install -y python-dev
@@ -27,8 +27,7 @@ Copy the voice of anyone using machine learning.
 ```
     pip install --upgrade pip
     pip install numpy scipy matplotlib ipython jupyter pandas sympy nose
-    pip install theano
-    pip install lxml
+    pip install theano lxml
 
     export CFLAGS=-I/home/vagrant/mimicry.ai/venv/lib/python2.7/site-packages/numpy/core/include
     pip install bandmat
@@ -86,4 +85,24 @@ http://mp3lier.info/
 youtube-dl --extract-audio --audio-format mp3 https://www.youtube.com/watch?v=4CxkK1gam8o
 
 
+--------------------------------------------------------------------------------
 
+## Flask Server
+
+* Install dependencies
+
+    cd ~/mimicry.ai
+    source venv/bin/activate
+
+    cd server
+    pip install flask
+
+Run Python server
+
+    python index.py
+
+Request:
+
+    curl -XPOST http://api.mimicry.ai/mimic -F 'speaker=modi' -F 'content=I Love India'
+
+--------------------------------------------------------------------------------
